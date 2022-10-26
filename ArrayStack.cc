@@ -9,6 +9,9 @@ ArrayStack<T>::ArrayStack(int zs){
   data = new T[size];
   sp = data;
 
+  // postcondition
+  assert(empty());  // 5. empty(newstack) == true
+  
 }
 
 
@@ -22,28 +25,29 @@ void ArrayStack<T>::push(T e){
   sp++;
 
   // postcondition
-  //assert(*sp == e); // 2. pop(push(S,I))  = S
-  //assert(empty() == false); // 3. empty(push(S,I)) = false
+  assert(top() == e); // 4. top(push(S,I)) = I
+  assert(empty() == false); // 6. empty(push(S,I)) = false
 }
 
 
 template <typename T>
 void ArrayStack<T>::pop() {
-  assert(!empty()); // 1 pop(newstack)   = newstack
-
-  sp--;
+  if (empty())
+    return;
+  sp--;	
 }
 
 
 template <typename T>
 T ArrayStack<T>::top() {
-  assert(!empty()); //axioma 3 top(newstack)   = newstack
+  //precondition
+  assert(!empty()); // 3. top(newstack)   = newstack
+  
   return *(sp - 1);
 }
 
 template <typename T>
 void ArrayStack<T>::resize() {
-  //int moreSize = 10;
   int newSize = size + NewStackSizeFactor;
 
   T * newdata = new T(newSize);
@@ -60,11 +64,9 @@ void ArrayStack<T>::resize() {
 
 template <typename T>
 bool ArrayStack<T>::empty() {
-  // empty(newstack) = true
 
   return sp == data;
 
-  // postcondition
 
 }
 
@@ -74,14 +76,15 @@ bool ArrayStack<T>::empty() {
 
 int main(){
   ArrayStack<int> * pstack = new ArrayStack<int>(10);
+  std::cout << pstack->empty() << std::endl;
   pstack->push(1);
-  // pstack->push(2);
-  // pstack->push(3);
-  // pstack->push(4);
+  pstack->push(2);
+  pstack->push(3);
+  pstack->pop();
 
-  //pstack->pop();
+
   std::cout << pstack->top() << std::endl;
-
+  std::cout << pstack->empty() << std::endl;
   return 0;
 }
 
