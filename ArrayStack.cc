@@ -1,6 +1,8 @@
 #include "ArrayStack.h"
 #include <assert.h>
+#include <iostream>
 #define NewStackSizeFactor 10
+
 template <typename T>
 void ArrayStack<T>::push(T e){
   int numElem = sp - data;
@@ -42,5 +44,26 @@ void ArrayStack<T>::resize() {
   sp = data + size;
   size = newSize;
 
+}
+
+template <typename T>
+bool ArrayStack<T>::empty() {
+  return sp == data;
+}
+
+
+// main function
+
+int main(){
+  ArrayStack<int> * pstack = new ArrayStack<int>(10);
+  pstack->push(1);
+  pstack->push(2);
+  pstack->push(3);
+  pstack->push(4);
+
+  pstack->pop();
+  std::cout << pstack->top() << std::endl;
+
+  return 0;
 }
 
