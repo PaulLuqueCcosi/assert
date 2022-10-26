@@ -11,13 +11,14 @@ class  ArrayStack : public Stack<T>{
     void resize();
 
   public:
-    ArrayStack(int zs) : size{zs}, data{new T[size]}, sp{data} {}
-    // ArrayStack(int zs){
-    //   size = zs;
-    //   data = new T[size];
-    //   sp = data;
+    ArrayStack(int zs);
+    //ArrayStack(int zs) : size{zs}, data{new T[size]}, sp{data} {}
+    //ArrayStack(int zs){
+    //  size = zs;
+    //  data = new T[size];
+    //  sp = data;
 
-    // }
+    //}
     ~ArrayStack() { delete [] data; }
 
     void push(T);

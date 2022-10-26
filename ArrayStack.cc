@@ -3,6 +3,14 @@
 #include <iostream>
 #define NewStackSizeFactor 10
 
+template <typename T>
+ArrayStack<T>::ArrayStack(int zs){
+  size = zs;
+  data = new T[size];
+  sp = data;
+
+}
+
 
 template <typename T>
 void ArrayStack<T>::push(T e){
@@ -14,8 +22,8 @@ void ArrayStack<T>::push(T e){
   sp++;
 
   // postcondition
-  assert(*sp == e); // 2. pop(push(S,I))  = S
-  assert(empty() == false); // 3. empty(push(S,I)) = false
+  //assert(*sp == e); // 2. pop(push(S,I))  = S
+  //assert(empty() == false); // 3. empty(push(S,I)) = false
 }
 
 
@@ -53,25 +61,25 @@ void ArrayStack<T>::resize() {
 template <typename T>
 bool ArrayStack<T>::empty() {
   // empty(newstack) = true
-  
+
   return sp == data;
-  
+
   // postcondition
 
 }
 
-
+// -------------------------------------------------
 
 // main function
 
 int main(){
   ArrayStack<int> * pstack = new ArrayStack<int>(10);
-  // pstack->push(1);
+  pstack->push(1);
   // pstack->push(2);
   // pstack->push(3);
   // pstack->push(4);
 
-  pstack->pop();
+  //pstack->pop();
   std::cout << pstack->top() << std::endl;
 
   return 0;
