@@ -81,6 +81,7 @@ bool ArrayStack<T>::empty() {
 
 int main(){
   ArrayStack<int> * pstack = new ArrayStack<int>(10);
+  //pstack->top(); // error
   std::cout << pstack->empty() << std::endl;
   pstack->push(1);
   pstack->push(2);
