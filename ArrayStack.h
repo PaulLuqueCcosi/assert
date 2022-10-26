@@ -5,18 +5,24 @@
 template <typename T>
 class  ArrayStack : public Stack<T>{
   private:
-    T data [];
+    T data[];
     int size;
     T* sp;
     void resize();
 
   public:
-    ArrayStack(int zs) : size(zs), data{new T[size]}, sp{data} {}
+    ArrayStack(int zs) : size{zs}, data{new T[size]}, sp{data} {}
+    // ArrayStack(int zs){
+    //   size = zs;
+    //   data = new T[size];
+    //   sp = data;
+
+    // }
     ~ArrayStack() { delete [] data; }
 
     void push(T);
     void pop();
-    void top();
+    T top();
     bool empty();
 
 };
