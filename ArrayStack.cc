@@ -26,7 +26,7 @@ void ArrayStack<T>::push(T e){
   // postcondition
   assert(top() == e); // 4. top(push(S,I)) = I
   assert(empty() == false); // 6. empty(push(S,I)) = false
-  assert((sp-1) == data + numElem); // 7. pop(push(S,I)) = S
+  assert((sp-1) == data + numElem); // 2. pop(push(S,I)) = S
 }
 
 
