@@ -11,6 +11,11 @@ ArrayStack<T>::ArrayStack(int zs){
 
   // postcondition
   assert(empty());  // 5. empty(newstack) == true
+  
+  // NO SE COMO HACER QUE EL POP() SE EJECTUE Y COMPROBAR CON EMPTY()
+  // 1 pop(newstack) == newstack
+  pop();
+  assert(empty());
 }
 
 
