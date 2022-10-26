@@ -1,4 +1,5 @@
 #include "ArrayStack.h"
+#include <assert.h>
 #define NewStackSizeFactor 10
 template <typename T>
 void ArrayStack<T>::push(T e){
@@ -12,17 +13,17 @@ void ArrayStack<T>::push(T e){
 
 template <typename T>
 void ArrayStack<T>::pop() {
-  if (empty())
-    return;
+  assert(!empty()); //axioma pop(newstack)   = newstack
+  // if (empty())
+  //  return;
 
   sp--;
 }
 
 
 template <typename T>
-void ArrayStack<T>::top() {
-  if (empty())
-    return;
+T ArrayStack<T>::top() {
+  assert(!empty()); //axioma top(newstack)   = newstack
   return *(sp - 1);
 }
 
