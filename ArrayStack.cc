@@ -3,6 +3,7 @@
 #include <iostream>
 #define NewStackSizeFactor 10
 
+
 template <typename T>
 void ArrayStack<T>::push(T e){
   int numElem = sp - data;
@@ -17,11 +18,10 @@ void ArrayStack<T>::push(T e){
   assert(empty() == false); // 3. empty(push(S,I)) = false
 }
 
+
 template <typename T>
 void ArrayStack<T>::pop() {
   assert(!empty()); // 1 pop(newstack)   = newstack
-  // if (empty())
-  //  return;
 
   sp--;
 }
@@ -61,6 +61,7 @@ bool ArrayStack<T>::empty() {
 }
 
 
+/*
 // main function
 
 int main(){
@@ -75,4 +76,4 @@ int main(){
 
   return 0;
 }
-
+*/
