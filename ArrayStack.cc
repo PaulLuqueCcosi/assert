@@ -32,7 +32,7 @@ void ArrayStack<T>::resize() {
   //int moreSize = 10;
   int newSize = size + NewStackSizeFactor;
 
-  T newdata[] = new T(newSize);
+  T * newdata = new T(newSize);
 
   for (int i = 0; i < size; i++)
     newdata[i] = data[i];
