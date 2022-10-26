@@ -11,7 +11,6 @@ ArrayStack<T>::ArrayStack(int zs){
 
   // postcondition
   assert(empty());  // 5. empty(newstack) == true
-  
 }
 
 
@@ -27,6 +26,7 @@ void ArrayStack<T>::push(T e){
   // postcondition
   assert(top() == e); // 4. top(push(S,I)) = I
   assert(empty() == false); // 6. empty(push(S,I)) = false
+  assert((sp-1) == data + numElem); // 7. pop(push(S,I)) = S
 }
 
 
@@ -42,7 +42,7 @@ template <typename T>
 T ArrayStack<T>::top() {
   //precondition
   assert(!empty()); // 3. top(newstack)   = newstack
-  
+
   return *(sp - 1);
 }
 
