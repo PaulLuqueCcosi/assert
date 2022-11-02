@@ -17,8 +17,6 @@ ArrayStack<T>::ArrayStack(int zs){
   
   // NO SE COMO HACER QUE EL POP() SE EJECTUE Y COMPROBAR CON EMPTY()
   // 1 pop(newstack) == newstack
-  pop();
-  assert(empty());
 }
 
 
@@ -40,9 +38,13 @@ void ArrayStack<T>::push(T e){
 
 template <typename T>
 void ArrayStack<T>::pop() {
-  if (empty())
+
+  if (empty()){
+    assert(sp == data); // 1. pop(newstack) == newstack
     return;
+  }
   sp--;	
+
 }
 
 
@@ -82,18 +84,18 @@ bool ArrayStack<T>::empty() {
 
 // main function
 /*
-int main(){
-  Stack<int> * pstack = new ArrayStack<int>(10);
-  //pstack->top(); // error
-  std::cout << pstack->empty() << std::endl;
-  pstack->push(1);
-  pstack->push(2);
-  pstack->push(3);
-  pstack->pop();
+   int main(){
+   Stack<int> * pstack = new ArrayStack<int>(10);
+//pstack->top(); // error
+std::cout << pstack->empty() << std::endl;
+pstack->push(1);
+pstack->push(2);
+pstack->push(3);
+pstack->pop();
 
 
-  std::cout << pstack->top() << std::endl;
-  std::cout << pstack->empty() << std::endl;
-  return 0;
+std::cout << pstack->top() << std::endl;
+std::cout << pstack->empty() << std::endl;
+return 0;
 }
 */
