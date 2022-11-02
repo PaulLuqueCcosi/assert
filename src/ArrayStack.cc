@@ -3,6 +3,8 @@
 #include <iostream>
 #include "Stack.h"
 #define NewStackSizeFactor 10
+// desactive asserts
+//#define NDEBUG 
 
 template <typename T>
 ArrayStack<T>::ArrayStack(int zs){
@@ -77,9 +79,9 @@ bool ArrayStack<T>::empty() {
 }
 
 // -------------------------------------------------
-/*
-// main function
 
+// main function
+/*
 int main(){
   Stack<int> * pstack = new ArrayStack<int>(10);
   //pstack->top(); // error
