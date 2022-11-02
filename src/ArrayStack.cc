@@ -77,7 +77,7 @@ bool ArrayStack<T>::empty() {
 }
 
 // -------------------------------------------------
-
+/*
 // main function
 
 int main(){
@@ -94,4 +94,4 @@ int main(){
   std::cout << pstack->empty() << std::endl;
   return 0;
 }
-
+*/
