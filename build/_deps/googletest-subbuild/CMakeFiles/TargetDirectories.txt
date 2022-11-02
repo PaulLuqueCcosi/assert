@@ -1,0 +1,3 @@
+/home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+/home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+/home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

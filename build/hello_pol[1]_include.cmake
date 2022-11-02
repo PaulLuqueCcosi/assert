@@ -1,0 +1,5 @@
+if(EXISTS "/home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build/hello_pol[1]_tests.cmake")
+  include("/home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build/hello_pol[1]_tests.cmake")
+else()
+  add_test(hello_pol_NOT_BUILT hello_pol_NOT_BUILT)
+endif()

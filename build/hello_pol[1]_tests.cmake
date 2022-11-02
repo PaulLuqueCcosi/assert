@@ -1,0 +1,5 @@
+add_test([=[HelloTest.BasicAssertions]=]  /home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build/hello_pol [==[--gtest_filter=HelloTest.BasicAssertions]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[HelloTest.BasicAssertions]=]  PROPERTIES WORKING_DIRECTORY /home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[HelloTest.otherAssertions]=]  /home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build/hello_pol [==[--gtest_filter=HelloTest.otherAssertions]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[HelloTest.otherAssertions]=]  PROPERTIES WORKING_DIRECTORY /home/pool/Documentos/UNSA-22B/Lab_TO/labAssert/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  hello_pol_TESTS HelloTest.BasicAssertions HelloTest.otherAssertions)
