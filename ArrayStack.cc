@@ -1,6 +1,7 @@
 #include "ArrayStack.h"
 #include <assert.h>
 #include <iostream>
+#include "Stack.h"
 #define NewStackSizeFactor 10
 
 template <typename T>
@@ -80,7 +81,7 @@ bool ArrayStack<T>::empty() {
 // main function
 
 int main(){
-  ArrayStack<int> * pstack = new ArrayStack<int>(10);
+  Stack<int> * pstack = new ArrayStack<int>(10);
   //pstack->top(); // error
   std::cout << pstack->empty() << std::endl;
   pstack->push(1);
